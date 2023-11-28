@@ -4,12 +4,12 @@ import Lab5 from "./lab5.js";
 import CourseRoutes from "./courses/routes.js";
 import cors from "cors";
 import ModuleRoutes from "./modules/routes.js";
-import AssignmentRoutes from './assignments/routes.js';
-import "dotenv/config";
+// import AssignmentRoutes from './assignments/routes.js';
+// import "dotenv/config";
 
 
 const app = express();
-const allowedOrigins = ['http://localhost:3000', 'https://a5--aesthetic-smakager-441fa4.netlify.app'];
+// const allowedOrigins = ['http://localhost:3000', 'https://a5--aesthetic-smakager-441fa4.netlify.app'];
 
 app.use(cors({
     credentials: true,
@@ -25,7 +25,7 @@ app.use(cors({
 app.use(express.json());
 CourseRoutes(app);
 ModuleRoutes(app);
-AssignmentRoutes(app);
+// AssignmentRoutes(app);
 Lab5(app);
 Hello(app);
-app.listen(process.env.PORT ||8000);
+app.listen(process.env.PORT ||4000);
